@@ -22,7 +22,6 @@ export class StaffComponent implements OnInit {
   staff:person;
   
  handleStaff(staffList:JSON){
-
   for (let index = 0; index < Object.keys(staffList).length; index++) {
     const element = staffList[index];
     let age:String;
@@ -45,14 +44,14 @@ export class StaffComponent implements OnInit {
     }
     this.staffData.push(p);    
   }
-  console.log(this.staffData);
+  //console.log(this.staffData);
   this.dataSource = this.staffData;
  }
 
 async getStaff(){
   (await this.api.getStaff()).subscribe(
     (staffList:JSON)=>{
-      console.log(staffList);
+      //console.log(staffList);
       this.handleStaff(staffList);
     }
   )
