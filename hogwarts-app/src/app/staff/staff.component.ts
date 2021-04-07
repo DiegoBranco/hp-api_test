@@ -18,6 +18,7 @@ export class StaffComponent implements OnInit {
 
   public staffData: person[] = [];
   displayedColumns: string[] = ['name', 'patronus', 'age', 'image'];
+
   dataSource;
   staff:person;
   
