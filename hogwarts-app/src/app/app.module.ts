@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CharactersComponent } from './characters/characters.component';
 import { StudentsComponent } from './students/students.component';
 import { StaffComponent } from './staff/staff.component';
+import { MatTableModule } from '@angular/material/table'
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { StaffComponent } from './staff/staff.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatTableModule,
     BrowserAnimationsModule
   ],
   providers: [],
