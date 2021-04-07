@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiCallService } from "../api-call.service";
+
 
 @Component({
   selector: 'app-students',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api:ApiCallService) { }
 
   ngOnInit(): void {
+    this.getStudents();
   }
+
+  async getStudents(){
+    (await this.api.getStudent()).subscribe(
+      (studentList:JSON)=>{
+        console.log(studentList);
+      }
+    )
+  }
+
 
 }
